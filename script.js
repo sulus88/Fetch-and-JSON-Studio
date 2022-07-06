@@ -4,7 +4,9 @@ window.addEventListener("load", function(){
         response.json().then(function(json){
             const div= document.getElementById("container");
             for(let index=0; index<json.length; index++){
-            div.innerHTML +=
+
+                sortedJson = json.sort((a,b) =>(a.hoursInSpace-b.hoursInSpace))                               
+                div.innerHTML +=
             
             `<div class="astronaut">
             <div class="bio">
